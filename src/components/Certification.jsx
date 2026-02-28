@@ -6,7 +6,7 @@ const Certification = () => {
     const [ref, isActive] = useScrollReveal(0.2);
 
     return (
-        <section ref={ref} className={styles.certSection} id="verification">
+        <section ref={ref} className={styles.certSection} id="certification">
             <div className={styles.container}>
 
                 <div className={styles.content}>
