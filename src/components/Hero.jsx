@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import heroImg from '/hero.png';
 
 const Hero = () => {
     const [ref, isActive] = useScrollReveal(0.1);
@@ -74,7 +75,7 @@ const Hero = () => {
                 <div className={styles.circle_ring}>
                     <div className={styles.pulse_ring}></div>
                     <div className={styles.pulse_ring2}></div>
-                    <img src="/hero.png" alt="Team building production-grade software" className={styles.hero_image} />
+                    <img src={heroImg} alt="Team building production-grade software" className={styles.hero_image} />
                 </div>
             </div>
 

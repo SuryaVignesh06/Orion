@@ -35,6 +35,7 @@ const Navbar = () => {
             <div className={styles.nav_menu}>
                 <a href="#curriculum" onClick={(e) => scrollToSection(e, 'curriculum')} className={styles.nav_item}>Curriculum</a>
                 <a href="#about" onClick={(e) => scrollToSection(e, 'about')} className={styles.nav_item}>About</a>
+                <a href="#certification" onClick={(e) => scrollToSection(e, 'certification')} className={styles.nav_item}>Certification</a>
             </div>
 
             <div className={styles.actions}>
