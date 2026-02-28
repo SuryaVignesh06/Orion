@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import heroImg from '/hero.png';
+import heroImg from '../assets/hero.png';
 
 const Hero = () => {
     const [ref, isActive] = useScrollReveal(0.1);
