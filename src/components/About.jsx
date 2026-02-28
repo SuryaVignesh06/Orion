@@ -27,11 +27,20 @@ const About = () => {
                     <h2 className={styles.sectionHeading} style={{ color: 'var(--color-primary-red)' }}>
                         <AnimatedText text="Supported By" tag="span" isActive={isActive} delay={0.15} />
                     </h2>
-                    <p className={`${styles.body_text} ${isActive ? styles.show : ''}`} style={{ transitionDelay: '0.3s' }}>
+                    <p className={`${styles.body_text} ${isActive ? styles.show : ''}`} style={{ transitionDelay: '0.3s', marginBottom: '2rem' }}>
                         Orionac is part of global startup support ecosystems including major technology and cloud innovation programs.
-                        <br /><br />
-                        <span style={{ fontSize: '0.85rem', color: 'var(--color-text-light)' }}>(Official co-branding logos to be placed here.)</span>
                     </p>
+                    <div className={`${styles.partner_logos} ${isActive ? styles.show : ''}`} style={{ transitionDelay: '0.4s' }}>
+                        <div className={styles.partner_logo}>
+                            <img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" alt="NVIDIA" />
+                        </div>
+                        <div className={styles.partner_logo}>
+                            <img src="https://www.gstatic.com/devrel-devsite/prod/v0e0f589edd85502a40d78d7d0825db8ea5ef3b99ab4070381ee86977c9168730/cloud/images/cloud-logo.svg" alt="Google Cloud" />
+                        </div>
+                        <div className={styles.partner_logo}>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" />
+                        </div>
+                    </div>
                 </div>
 
             </div>

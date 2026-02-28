@@ -42,6 +42,42 @@
     transform: translateY(0);
 }
 
+
+.partner_logos {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+
+.partner_logos.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.partner_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner_logo img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.partner_logo img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
