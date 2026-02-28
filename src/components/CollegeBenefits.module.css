@@ -103,7 +103,7 @@
 }
 
 .benefitCard:hover .cardNumber {
-    color: rgba(188, 65, 44, 0.1);
+    color: rgba(255, 0, 0, 0.1);
 }
 
 .cardTitle {

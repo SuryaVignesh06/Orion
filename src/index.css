@@ -4,9 +4,9 @@
   /* User's Custom Palette */
   --color-bg-primary: #F8F8F7;
   --color-bg-secondary: #EEEDED;
-  --color-primary-red: #BC412C;
-  --color-dark-red: #A03624;
-  --color-deep-red: #63251B;
+  --color-primary-red: #ff0000;
+  --color-dark-red: #cc0000;
+  --color-deep-red: #990000;
   --color-text-main: #101010;
   --color-text-light: #555555;
   --color-white: #ffffff;

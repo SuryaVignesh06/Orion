@@ -93,7 +93,7 @@
 .btnPrimary:hover {
     background-color: var(--color-dark-red);
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(188, 65, 44, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
