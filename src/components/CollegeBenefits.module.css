@@ -1,0 +1,130 @@
+.benefitsSection {
+    padding: 6rem 0;
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+}
+
+.sectionLabel {
+    display: inline-block;
+    color: var(--color-primary-red);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.75rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-main);
+}
+
+.highlight {
+    color: var(--color-primary-red);
+    border-bottom: 2px solid var(--color-primary-red);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.benefitCard {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.benefitCard.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefitCard:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary-red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.benefitCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primary-red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.benefitCard:hover::after {
+    transform: scaleX(1);
+}
+
+.cardNumber {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(16, 16, 16, 0.06);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.benefitCard:hover .cardNumber {
+    color: rgba(188, 65, 44, 0.1);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cardDesc {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

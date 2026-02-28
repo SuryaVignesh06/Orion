@@ -1,0 +1,112 @@
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.4s ease;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logo_text {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    letter-spacing: -0.5px;
+}
+
+.nav_menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav_item {
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    transition: color 0.2s ease;
+}
+
+.nav_item:hover {
+    color: var(--color-primary-red);
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: var(--color-text-main);
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    letter-spacing: 0.5px;
+}
+
+.btnSecondary:hover {
+    color: var(--color-primary-red);
+}
+
+.btnPrimary {
+    background-color: var(--color-primary-red);
+    color: var(--color-white);
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btnPrimary:hover {
+    background-color: var(--color-dark-red);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(188, 65, 44, 0.3);
+}
+
+@media (max-width: 768px) {
+    .nav_menu {
+        display: none;
+    }
+
+    .btnSecondary {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 20px;
+        height: 60px;
+    }
+}

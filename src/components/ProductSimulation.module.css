@@ -1,0 +1,39 @@
+.product_simulation {
+    padding: 6rem 0;
+    background-color: var(--color-bg-primary);
+    text-align: center;
+}
+
+.featureList {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.featureItem h3 {
+    font-family: var(--font-primary);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footerText {
+    max-width: 600px;
+    margin: 3rem auto 0;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+}
+
+.footerText.show {
+    opacity: 1;
+    transform: translateY(0);
+}

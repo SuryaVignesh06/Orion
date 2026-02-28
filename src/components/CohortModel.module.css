@@ -1,0 +1,158 @@
+.cohortSection {
+    padding: 8rem 0;
+    background-color: var(--color-bg-primary);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+.header {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-text-main);
+    text-transform: uppercase;
+}
+
+.diagramWrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.diagramWrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nodeLeft,
+.nodeRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.nodeTop {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nodeBottom {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--color-primary-red);
+    font-weight: 400;
+    margin-top: -5px;
+}
+
+.nodeRight .nodeBottom {
+    color: var(--color-primary-red);
+}
+
+.nodesMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.midNode {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    background: var(--color-bg-primary);
+    box-shadow: 0 0 10px var(--color-bg-primary);
+}
+
+.svgConnectors {
+    flex: 1 1 0%;
+    min-width: 0;
+    height: 100%;
+    overflow: visible;
+}
+
+.staticPath {
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: 0.5;
+    fill: none;
+    stroke-linecap: round;
+}
+
+.animatedPath {
+    stroke: var(--color-primary-red);
+    stroke-width: 1;
+    fill: none;
+    stroke-linecap: round;
+    opacity: 0;
+}
+
+.visible .animatedPath {
+    opacity: 1;
+    animation: moveDash 3s linear infinite;
+}
+
+@keyframes moveDash {
+    0% {
+        stroke-dashoffset: 130;
+    }
+
+    100% {
+        stroke-dashoffset: -30;
+    }
+}
+
+@media (max-width: 768px) {
+    .diagramWrapper {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .svgConnectors {
+        display: none;
+        /* Hide SVGs on mobile, or we could rotate them */
+    }
+
+    .nodesMiddle {
+        gap: 1.5rem;
+    }
+
+    .nodeLeft,
+    .nodeRight {
+        width: auto;
+    }
+}

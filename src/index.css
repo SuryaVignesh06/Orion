@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  /* User's Custom Palette */
+  --color-bg-primary: #F8F8F7;
+  --color-bg-secondary: #EEEDED;
+  --color-primary-red: #BC412C;
+  --color-dark-red: #A03624;
+  --color-deep-red: #63251B;
+  --color-text-main: #101010;
+  --color-text-light: #555555;
+  --color-white: #ffffff;
+  --color-border: rgba(16, 16, 16, 0.1);
+
+  /* Type mapping */
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-primary);
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-main);
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-family: var(--font-secondary);
+  color: var(--color-text-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   LAYOUT UTILS
+   ========================= */
+
+.grid {
+  display: grid;
+}
+
+.highlight-yellow {
+  color: var(--color-primary-red);
+}
+
+.highlight-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
